@@ -47,7 +47,7 @@ const studentsList = [
 ];
 
 /* Using destructuring to extract value from each student object, .map() to create new array of strings to describe each student, using
-template literal to return each students summary and description and finally, using Pronoun to create students gender.*/
+template literal to return each students summary and description and finally, using Pronoun to create students gender as the case may be.*/
 const studentDescriptions = studentsList.map(({ firstName, lastName, age, score, courses, gender }) => {
     const pronoun = gender === "Male" ? "He" : "She";
     return `${firstName} ${lastName} is ${age} years old and scored ${score}. ${pronoun} is taking: ${courses.join(", ")}`;
@@ -58,4 +58,4 @@ studentDescriptions.forEach((description, index) => {
     console.log(`Student ${index +1}:\n${description}\n`);
   });
   
-  
+
